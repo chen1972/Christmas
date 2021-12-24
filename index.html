@@ -3072,8 +3072,70 @@
 
 		<script src="js/main.js"></script>
 
+        <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="//file.caixin.com/webjs/get_wx_config.js"></script>        
+<script>
 
+	getWXConfig();
 
+	var imgUrl = "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fp2.music.126.net%2Fd6_se7fRxvmpwq8Umq1NvQ%3D%3D%2F109951163272599073.jpg&refer=http%3A%2F%2Fp2.music.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1642931907&t=b77ce76e81b8b16f4f58680061c24f0b";
+	var lineLink = "https://chen1972.github.io/Christmas/";
+	var descContent = '';
+	var shareTitle = '2021圣诞节快乐';
+	var appid = '';
+
+	wx.ready(function () {
+		wx.onMenuShareTimeline({
+			title: shareTitle, // 分享标题
+			link: lineLink, // 分享链接
+			imgUrl: imgUrl, // 分享图标
+			success: function () {
+				// 用户确认分享后执行的回调函数
+			},
+			cancel: function () {
+				// 用户取消分享后执行的回调函数
+			}
+		});
+		wx.onMenuShareAppMessage({
+			title: shareTitle, // 分享标题
+			desc: descContent, // 分享描述
+			link: lineLink, // 分享链接
+			imgUrl: imgUrl, // 分享图标
+			type: '', // 分享类型,music、video或link，不填默认为link
+			dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+			success: function () {
+				// 用户确认分享后执行的回调函数
+			},
+			cancel: function () {
+				// 用户取消分享后执行的回调函数
+			}
+		});
+		wx.onMenuShareQQ({
+			title: shareTitle, // 分享标题
+			desc: descContent, // 分享描述
+			link: lineLink, // 分享链接
+			imgUrl: imgUrl, // 分享图标
+			success: function () {
+				// 用户确认分享后执行的回调函数
+			},
+			cancel: function () {
+				// 用户取消分享后执行的回调函数
+			}
+		});
+		wx.onMenuShareWeibo({
+			title: shareTitle, // 分享标题
+			desc: descContent, // 分享描述
+			link: lineLink, // 分享链接
+			imgUrl: imgUrl, // 分享图标
+			success: function () {
+				// 用户确认分享后执行的回调函数
+			},
+			cancel: function () {
+				// 用户取消分享后执行的回调函数
+			}
+		});
+	});
+</script>
 	
 
 </div>
